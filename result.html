@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат гадания</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+	<!-- Звездочка и кружочек над текстом -->
+        <div class="top-decorations">
+            <img src="images/star1.png" alt="Звездочка" class="star top-star-result">
+			<img src="images/star1.png" alt="Звездочка" class="star bottom-star-result1">
+                    </div>
+        <div class="chat-container">
+            <!-- Сообщение пользователя -->
+            <div class="message user-message">
+                <div class="message-bubble">
+                    <span class="message-header">Ваш вопрос</span>
+                    <p id="user-question"></p>
+                </div>
+                <img src="images/user-icon.png" alt="User Icon" class="user-icon">
+            </div>
+
+            <!-- Сообщение таролога -->
+            <div class="message tarot-message">
+                <img src="images/tarot-icon.png" alt="Tarot Icon" class="tarot-icon">
+                <div class="message-bubble">
+                    <span class="message-header">Таролог</span>
+                    <p>Теперь нужно сделать расклад таро, нажмите на колоду ниже</p>
+                </div>
+            </div>
+			<img src="images/star1.png" alt="Звездочка" class="star bottom-star-result">
+			
+        </div>
+
+        <!-- Колоды карт -->
+        <div class="deck-container">
+            <!-- Карты будут добавлены через JavaScript -->
+        </div>
+    </div>
+
+    <script src="result.js"></script>
+</body>
+</html>

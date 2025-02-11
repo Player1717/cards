@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расклад Таро Кельтский крест</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+		<!-- Звездочка и кружочек над текстом -->
+        <div class="top-decorations">
+            <img src="images/star.png" alt="Звездочка" class="star top-star">
+			<img src="images/star1.png" alt="Звездочка" class="star top-star-second">
+            <img src="images/circle.png" alt="Кружочек" class="circle top-circle">
+        </div>
+
+            <h1>Расклад Таро<br>Кельтский крест</h1>
+            <p>Кельтский крест — одно из ключевых гаданий на картах Таро. В ходе гадания нужно выбрать десять карт из колоды, которые определят расклад по вашему вопросу.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="input-container">
+                <input type="text" id="question" placeholder="Напишите вопрос или загадайте про себя" class="question-input">
+                <button onclick="startReading()">Узнать ответ</button>
+				<!-- Звездочка и кружочек под полем для ввода -->
+        <div class="bottom-decorations">
+            <img src="images/star1.png" alt="Звездочка" class="star bottom-star">
+            <img src="images/circle1.png" alt="Кружочек" class="circle bottom-circle">
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

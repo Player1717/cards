@@ -1,0 +1,41 @@
+<!-- result-display.html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты Предсказания</title>
+    <link rel="stylesheet" href="result-display.css"> <!-- Подключаем CSS -->
+</head>
+<body>
+    <div class="container">
+	<!-- Кнопка "Другой вопрос" -->
+        <button id="new-question-button">Другой вопрос</button>
+		
+        <div class="card-container">
+            <img id="current-card" src="" alt="">
+        </div>
+
+        <div class="arrow-container">
+    <button id="prev-button" disabled>
+        <div class="arrow-wrapper prev-arrow">
+            <img src="images/strelka.png" alt="Назад" class="arrow-icon">
+        </div>
+    </button>
+    <button id="next-button">
+        <div class="arrow-wrapper next-arrow">
+            <img src="images/strelka.png" alt="Вперед" class="arrow-icon">
+        </div>
+    </button>
+</div>
+
+        <div class="explanation">
+            <h2 id="card-title"></h2>
+            <p id="card-description"></p>
+        </div>
+    </div>
+
+    <script src="result-display.js"></script> <!-- Подключаем JavaScript -->
+</body>
+</html>

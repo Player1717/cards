@@ -1,0 +1,119 @@
+/* result-display.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(177deg, #bae3ff, #508ab2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Стили для кнопки "Другой вопрос" */
+#new-question-button {
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 35px; /* Отступ снизу */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 16px; /* Размер текста */
+    font-weight: 500; /* Жирность текста */
+    color: white; /* Цвет текста */
+    background-color: transparent; /* Прозрачный фон */
+    border: 1px solid white; /* Белая рамка */
+    border-radius: 25px; /* Закругление углов */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные эффекты */
+}
+
+#new-question-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон при наведении */
+    transform: scale(1.05); /* Небольшое увеличение */
+}
+
+#new-question-button:active {
+    transform: scale(0.95); /* Уменьшение при нажатии */
+}
+
+.card-container {
+    position: relative;
+    width: 150px; /* Ширина слота */
+    height: auto; /* Автоматическая высота */
+    margin: 0 auto 20px; /* Центрирование и отступ снизу */
+	overflow: hidden; /* Скрываем переливающиеся части анимации */
+}
+
+#current-card {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out; /* Плавная анимация */
+	border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень для объема */
+}
+
+/* Стили для стрелок */
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.arrow-container button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none; /* Убираем фокус при клике */
+	overflow: hidden; /* Убираем лишние артефакты */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные эффекты */
+}
+
+.arrow-container button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Анимация для стрелок */
+@keyframes arrow-animation {
+    0% {
+        transform: translateX(3); /* Начальное положение */
+    }
+    100% {
+        transform: translateX(-3px); /* Легкое движение вверх */
+    }
+}
+
+.arrow-icon {
+    width: 35px;
+    height: auto;
+    display: block; /* Убираем лишние отступы вокруг изображения */
+    animation: arrow-animation 1.5s ease-in-out infinite alternate; /* Анимация */
+}
+
+/* Поворот стрелки "Вперед" */
+.next-arrow {
+    transform: rotate(180deg); /* Оставляем стрелку в исходном положении */
+}
+
+.explanation {
+    text-align: left;
+    max-width: 600px;
+}
+
+#card-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#card-description {
+    font-size: 1.2em;
+}

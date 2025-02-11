@@ -1,0 +1,170 @@
+/* layout.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #678efe, #335095); /* Светлый сверху, темный снизу */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Стили для уведомления */
+.notification {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px; /* Отступ сверху */
+    left: 20px; /* Отступ слева */
+    background-color: white; /* Белый фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объема */
+    text-align: center; /* Выравнивание текста по центру */
+    width: 250px; /* Ширина окна */
+}
+
+/* Стили для текста */
+.notification p {
+    margin: 0; /* Убираем стандартные отступы */
+    font-family: var(--montserrat); /* Шрифт */
+    font-size: 16px; /* Размер текста */
+    font-weight: 600; /* Жирность текста */
+    color: #333; /* Цвет текста */
+}
+
+/* Стили для кнопки */
+#result-button {
+    margin-top: 15px; /* Отступ сверху */
+    width: 150px; /* Ширина кнопки */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-family: var(--montserrat); /* Шрифт */
+    font-size: 14px; /* Размер текста */
+    font-weight: 500; /* Жирность текста */
+	background: linear-gradient(135deg, #2df3cb, #2ddcb8); /* Градиентный фон */
+    color: white; /* Цвет текста */
+    background-color: #3768f2; /* Синий фон */
+    border: none; /* Убираем границу */
+    border-radius: 25px; /* Закругление углов */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавные эффекты */
+}
+
+/* Эффект при наведении */
+#result-button:hover {
+    transform: translateY(-3px); /* Поднятие кнопки */
+    box-shadow: 0 6px 10px rgba(39, 75, 200, 0.8); /* Усиление тени */
+}
+
+/* Эффект при нажатии */
+#result-button:active {
+    transform: translateY(0); /* Возвращение кнопки */
+    box-shadow: 0 2px 5px rgba(39, 75, 200, 0.8); /* Уменьшение тени */
+}
+
+/* Стили для слотов */
+.layout-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-rows: auto auto auto; /* 3 строки */
+    gap: 20px; /* Отступы между слотами */
+    margin-top: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.card-slot {
+    position: relative;
+    width: 125px; /* Ширина слота */
+    height: 200px; /* Высота слота */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; /* Убираем текст внутри слотов */
+    color: transparent; /* Дополнительно делаем текст невидимым */
+}
+
+/* Расположение полей */
+.card-slot:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; } /* Поле 1 */
+.card-slot:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; } /* Поле 2 */
+.card-slot:nth-child(3) { grid-column: 3 / 4; grid-row: 1 / 2; } /* Поле 3 */
+.card-slot:nth-child(4) { grid-column: 4 / 5; grid-row: 1 / 2; } /* Поле 4 */
+
+.card-slot:nth-child(5) { grid-column: 2 / 3; grid-row: 2 / 3; } /* Поле 5 */
+.card-slot:nth-child(6) { grid-column: 3 / 4; grid-row: 2 / 3; } /* Поле 6 */
+
+.card-slot:nth-child(7) { grid-column: 1 / 2; grid-row: 3 / 4; } /* Поле 7 */
+.card-slot:nth-child(8) { grid-column: 2 / 3; grid-row: 3 / 4; } /* Поле 8 */
+.card-slot:nth-child(9) { grid-column: 3 / 4; grid-row: 3 / 4; } /* Поле 9 */
+.card-slot:nth-child(10) { grid-column: 4 / 5; grid-row: 3 / 4; } /* Поле 10 */
+
+/* Стили для колоды карт */
+.deck-container {
+    position: absolute;
+    left: 0; /* Колода слева */
+    top: 50%; /* По центру по вертикали */
+    transform: translateY(-50%);
+    width: 125px; /* Ширина колоды */
+    height: 200x; /* Высота колоды */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deck-image {
+    width: 125px;
+    height: 200px;
+    animation: deck-animation 1s infinite alternate;
+	border-radius: 10px;
+}
+
+@keyframes deck-animation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+}
+
+/* Анимация падения карт */
+.card {
+    position: absolute;
+    width: 125px; /* Ширина карточки */
+    height: 200px; /* Высота карточки */
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Отладочные стили */
+.card-slot::after {
+    content: attr(data-number); /* Номер слота */
+    position: absolute;
+    top: 100px; /* Позиция текста над слотом */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #ffffff26;
+    padding: 5px;
+    border-radius: 5px;
+}

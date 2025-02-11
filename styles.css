@@ -1,0 +1,440 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #678efe, #335095);;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Стили для декораций (звездочки и кружочки) */
+.top-decorations,
+.bottom-decorations {
+    display: flex;
+    justify-content: space-between; /* Располагаем элементы по краям */
+    width: 100%; /* Ширина контейнера */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.star,
+.circle {
+    width: 20px; /* Размер изображений */
+    height: auto; /* Автоматическая высота */
+}
+
+/* Позиционирование элементов */
+.top-star {
+    margin-left: 100px; /* Отступ слева */
+    width: 50px; /* Ширина */
+    height: 100px; /* Автоматическая высота */
+	margin-top: -10px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+.top-star-second {
+    margin-left: 100px; /* Отступ слева */
+    width: 20px; /* Ширина */
+    height: 30px; /* Автоматическая высота */
+	margin-top: 30px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+.top-star-result {
+    margin-left: 150px; /* Отступ слева */
+    width: 50px; /* Ширина */
+    height: 75px; /* Автоматическая высота */
+	margin-top: 30px; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+.top-circle {
+    margin-right: 150px; /* Отступ слева */
+    width: 10px; /* Ширина */
+    height: 10px; /* Автоматическая высота */
+	margin-top: -10px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+.bottom-star {
+    margin-left: 50px; /* Отступ слева */
+    width: 50px; /* Ширина */
+    height: 7*50px; /* Автоматическая высота */
+	margin-top: 25px; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+.bottom-star-result {
+    margin-left: 75px; /* Отступ слева */
+    width: 20px; /* Ширина */
+    height: 30px; /* Автоматическая высота */
+	margin-top: 15px; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+.bottom-star-result1 {
+    margin-right: 150px; /* Отступ слева */
+    width: 20px; /* Ширина */
+    height: 30px; /* Автоматическая высота */
+	margin-top: 5px; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+.bottom-circle {
+    margin-right: 250px; /* Отступ слева */
+    width: 15px; /* Ширина */
+    height: 15px; /* Автоматическая высота */
+	margin-top: 30px; /* Отступ сверху */
+    margin-bottom: 10px; /* Отступ снизу */
+    opacity: 0.8; /* Прозрачность */
+    transform: rotate(0deg); /* Поворот на 15 градусов */
+}
+
+/* Стили для заголовка */
+.title {
+    width: 380px; /* Ширина текстового блока */
+    height: 70px; /* Высота текстового блока */
+    margin: 85px 0 0; /* Отступ сверху */
+    font-family: var(--montserrat); /* Шрифт */
+    font-size: 30px; /* Размер текста */
+    font-weight: 900; /* Жирность текста */
+    line-height: 35px; /* Высота строки */
+    color: #fff; /* Цвет текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Стили для описания */
+.description {
+    width: 380px; /* Ширина текстового блока */
+    margin-top: 20px; /* Отступ сверху */
+    font-family: var(--montserrat); /* Шрифт */
+    font-size: 14px; /* Размер текста */
+    font-weight: 500; /* Жирность текста */
+    line-height: 20px; /* Высота строки */
+    color: #fff; /* Цвет текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Стили для поля ввода текста */
+input[type="text"] {
+    width: 395px; /* Ширина поля */
+    height: 50px; /* Высота поля */
+    padding: 15px 20px; /* Внутренние отступы */
+    font-family: var(--montserrat); /* Шрифт */
+    font-size: 14px; /* Размер текста */
+    font-weight: 500; /* Жирность текста */
+    line-height: 20px; /* Высота строки */
+    color: #343b4c; /* Цвет текста */
+    resize: none; /* Запрет изменения размера */
+    border: none; /* Убираем границу */
+    border-radius: 25px; /* Закругление углов */
+    outline: none; /* Убираем контур при фокусе */
+    box-shadow: 0 20px 20px -10px rgba(39, 75, 200, 0.8); /* Тень */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавные эффекты */
+}
+
+/* Эффект при фокусе */
+input[type="text"]:focus {
+    transform: translateY(-5px); /* Поднятие поля */
+    box-shadow: 0 25px 25px -10px rgba(39, 75, 200, 0.8); /* Усиление тени */
+}
+
+/* Стили для кнопки "Узнать ответ" */
+button {
+    width: 155px; /* Ширина кнопки */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+    color: white; /* Цвет текста */
+    background-color: #3768f2; /* Синий фон */
+    border: none; /* Убираем границу */
+    border-radius: 20px; /* Закругление углов */
+    cursor:bu pointer; /* Курсор в виде руки */
+    box-shadow: 0 20px 20px -10px rgba(39, 75, 200, 0.8); /* Тень */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Плавные эффекты */
+}
+
+/* Эффект при наведении */
+button:hover {
+    transform: translateY(-5px); /* Поднятие кнопки */
+    box-shadow: 0 25px 25px -10px rgba(39, 75, 200, 0.8); /* Усиление тени */
+}
+
+/* Эффект при нажатии */
+button:active {
+    transform: translateY(0); /* Возвращение кнопки */
+    box-shadow: 0 10px 10px -5px rgba(39, 75, 200, 0.8); /* Уменьшение тени */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.tarot-message {
+    justify-content: flex-start;
+}
+
+.user-icon, .tarot-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.message-bubble {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 60%;
+    width: fit-content;
+    color: #333; /* Темный текст для видимости */
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Темный заголовок */
+}
+
+.deck-container {
+    margin-top: 50px;
+    position: relative;
+    width: 150px; /* Размер колоды уменьшен в два раза */
+    height: 225px; /* Высота тоже уменьшена */
+    margin: 0 auto;
+}
+
+.deck-image {
+    width: 125px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: deck-animation 1s infinite alternate;
+	
+	/* Новые стили */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+@keyframes deck-animation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+}
+
+/* Стили для layout.html */
+.layout-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-rows: auto auto auto; /* 3 строки */
+    gap: 20px; /* Отступы между слотами */
+    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.card-slot {
+    position: relative;
+    width: 500px; /* Ширина слота */
+    height: 0;
+    padding-bottom: 150%; /* Высота слота (пропорция 2:3) */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* Размер текста внутри слотов */
+}
+
+
+/* Расположение полей */
+.card-slot:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; } /* Поле 1 */
+.card-slot:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; } /* Поле 2 */
+.card-slot:nth-child(3) { grid-column: 3 / 4; grid-row: 1 / 2; } /* Поле 3 */
+.card-slot:nth-child(4) { grid-column: 4 / 5; grid-row: 1 / 2; } /* Поле 4 */
+
+.card-slot:nth-child(5) { grid-column: 2 / 3; grid-row: 2 / 3; } /* Поле 5 */
+.card-slot:nth-child(6) { grid-column: 3 / 4; grid-row: 2 / 3; } /* Поле 6 */
+
+.card-slot:nth-child(7) { grid-column: 1 / 2; grid-row: 3 / 4; } /* Поле 7 */
+.card-slot:nth-child(8) { grid-column: 2 / 3; grid-row: 3 / 4; } /* Поле 8 */
+.card-slot:nth-child(9) { grid-column: 3 / 4; grid-row: 3 / 4; } /* Поле 9 */
+.card-slot:nth-child(10) { gri/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f4c75, #3282b8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.tarot-message {
+    justify-content: flex-start;
+}
+
+.user-icon, .tarot-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.message-bubble {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 60%;
+    width: fit-content;
+    color: #333; /* Темный текст для видимости */
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Темный заголовок */
+}
+
+.deck-container {
+    margin-top: 50px;
+    position: relative;
+    width: 150px; /* Размер колоды уменьшен в два раза */
+    height: 225px; /* Высота тоже уменьшена */
+    margin: 0 auto;
+}
+
+.deck-image {
+    width: 150px;
+    height: 225px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: deck-animation 1s infinite alternate;
+	
+	/* Новые стили */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объема */
+}
+
+@keyframes deck-animation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+}
+
+/* Стили для layout.html */
+.layout-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-rows: auto auto auto; /* 3 строки */
+    gap: 20px; /* Отступы между слотами */
+    margin-top: 50px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.card-slot {
+    position: relative;
+    width: 150px; /* Ширина слота = ширина карточки */
+    height: 225px; /* Высота слота = высота карточки */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em; /* Размер текста внутри слотов */
+}
+
+/* Расположение полей */
+.card-slot:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; } /* Поле 1 */
+.card-slot:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; } /* Поле 2 */
+.card-slot:nth-child(3) { grid-column: 3 / 4; grid-row: 1 / 2; } /* Поле 3 */
+.card-slot:nth-child(4) { grid-column: 4 / 5; grid-row: 1 / 2; } /* Поле 4 */
+
+.card-slot:nth-child(5) { grid-column: 2 / 3; grid-row: 2 / 3; } /* Поле 5 */
+.card-slot:nth-child(6) { grid-column: 3 / 4; grid-row: 2 / 3; } /* Поле 6 */
+
+.card-slot:nth-child(7) { grid-column: 1 / 2; grid-row: 3 / 4; } /* Поле 7 */
+.card-slot:nth-child(8) { grid-column: 2 / 3; grid-row: 3 / 4; } /* Поле 8 */
+.card-slot:nth-child(9) { grid-column: 3 / 4; grid-row: 3 / 4; } /* Поле 9 */
+.card-slot:nth-child(10) { grid-column: 4 / 5; grid-row: 3 / 4; } /* Поле 10 */
