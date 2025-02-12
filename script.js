@@ -4,11 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.Telegram && window.Telegram.WebApp) {
         const tg = window.Telegram.WebApp;
 
-        // Установка альбомной ориентации
-        tg.setOrientation("landscape"); // Фиксирует альбомную ориентацию
-
-        // Расширение приложения на весь экран
-        tg.expand(); // Занимает весь доступный экран
+        // Установка альбомной ориентации через Telegram API
+        tg.setOrientation("landscape");
+        tg.expand();
+    } else if (screen.orientation && screen.orientation.lock) {
+        // Установка альбомной ориентации через Screen Orientation API
+        screen.orientation
+            .lock("landscape")
+            .then(() => {
+                console.log("Ориентация успешно заблокирована в альбомный режим.");
+            })
+            .catch((err) => {
+                console.log("Ошибка блокировки ориентации:", err);
+            });
+    } else {
+        console.log("Невозможно заблокировать ориентацию.");
     }
 });
 
