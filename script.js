@@ -1,4 +1,5 @@
 // script.js
+window.Telegram.WebApp.expand();
 
 document.addEventListener('DOMContentLoaded', () => {
     if (window.Telegram && window.Telegram.WebApp) {
