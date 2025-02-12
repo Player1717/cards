@@ -2,10 +2,17 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="telegram:orientation" content="landscape"> <!-- Фиксация альбомной ориентации -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
-    <title>Расклад Таро Кельтский крест</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Мое Telegram Mini App</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    // Ждем загрузки контента
+    window.addEventListener("DOMContentLoaded", function() {
+      const tg = window.Telegram.WebApp;
+      tg.ready();     // Сообщаем Telegram, что приложение готово
+      tg.expand();    // Расширяем область просмотра на весь экран
+    });
+  </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
