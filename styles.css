@@ -16,6 +16,34 @@ body {
     min-height: 100vh;
 }
 
+@media (orientation: landscape) {
+    body {
+        flex-direction: row; /* Горизонтальное расположение элементов */
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        flex-direction: column; /* Вертикальное расположение элементов */
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .container {
     max-width: 800px;
     width: 100%;
