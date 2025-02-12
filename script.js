@@ -22,6 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+window.addEventListener('resize', function() {
+  if (window.innerWidth > window.innerHeight) {
+    console.log("Альбомный режим активен");
+    // Здесь можно применить специфичные стили или логику для альбомного режима
+  } else {
+    console.log("Портретный режим");
+  }
+});
+
 function startReading() {
     const question = document.getElementById("question").value;
 
