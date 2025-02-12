@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.Telegram && window.Telegram.WebApp) {
         const tg = window.Telegram.WebApp;
 
-        // Фиксация альбомной ориентации
-        tg.setOrientation("landscape"); // Новый метод для установки ориентации
-        tg.expand(); // Расширяет приложение на весь экран
+        // Установка альбомной ориентации
+        tg.setOrientation("landscape"); // Фиксирует альбомную ориентацию
+
+        // Расширение приложения на весь экран
+        tg.expand(); // Занимает весь доступный экран
     }
 });
 
